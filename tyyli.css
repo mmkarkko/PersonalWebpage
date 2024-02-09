@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F2E9EB;
+  }
+  header {
+    background-color: #F2E9EB;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 20px;
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .left-column {
+    display: flex;
+    flex-direction: column;
+  }
+  .right-column {
+    position: relative;
+  }
+  h1, h2, h3 {
+    color: #DD8EA4;
+    font-family: 'Sofia', cursive;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    margin-bottom: 10px;
+    color: #31383F;
+  }
+  .section1 {
+
+    margin-bottom: 20px;
+    margin-right: 3em;
+  }
+  .section2 {
+    margin-bottom: 20px;
+    margin-right: 3em;
+
+  }
+  .buttons {
+    margin-bottom: 20px;
+    margin-right: 3em;
+
+  }
+  footer {
+    background-color: #31383F;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px; /* Pyöristetty kulmat */
+    transition: background-color 0.3s;
+    position: relative;
+    grid-column: span 2;
+
+  }
+  
+  .button:hover {
+    background-color: #45a049; /* Värin vaihto hiiren ollessa päällä */
+  }
+
+  .profile-picture {
+    width: 170px;
+    height: 250px;
+    border-radius: 50%; /* Muuttaa kuvan soikeaksi */
+    overflow: hidden; /* Piilottaa mahdolliset ylimääräiset osat */
+  }
+  
+  .profile-picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  
