@@ -59,16 +59,12 @@ body {
   }
 
   .profile-picture {
-    margin: 20px;
-    width: 180px;
-    height: 250px;
-    border-radius: 50%; /* Muuttaa kuvan soikeaksi */
-    overflow: hidden; /* Piilottaa mahdolliset ylimääräiset osat */
+    margin: 2em;
+
   }
   .profile-picture img {
-    width: 110%;
-    height: auto;
-    display: block;
+
+
   }
 
 
@@ -120,4 +116,12 @@ body {
     padding: 0em;
   }
 
+  .profile-picture {
+    margin: 0;
+  }
+
+  .profile-picture img {
+    max-height: 10em;
+
+  }
 }
