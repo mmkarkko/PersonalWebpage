@@ -10,96 +10,114 @@ body {
     padding: 20px;
     text-align: center;
   }
-  .container {
+
+.grid-item1 { grid-area: header; }
+.grid-item2 { grid-area: menu; }
+.grid-item3 { grid-area: left; }
+.grid-item4 { grid-area: right; }
+.grid-item5 { grid-area: footer; }
+
+  .grid-container {
     display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto 1fr auto;
-    grid-gap: 20px;
-    width: 80%;
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    grid-template-areas:
+      'header header header header header header'
+      'menu menu left left right right'
+      'footer footer footer footer footer footer';
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 0.7em;
+    margin: 2em;
+    grid-column-gap: 1em;
   }
 
-  .left-column {
-    display: flex;
-    flex-direction: column;
+  .grid-item1 {
+    grid-area: header;
+    padding: 1em;
   }
-  .right-column {
-    position: relative;
+
+  .grid-item2 {
+    grid-area: menu;
   }
+
+  .grid-item3 {
+    grid-area: left;
+  }
+
+  .grid-item4 {
+    grid-area: right;
+  }
+
+  .grid-item5 {
+    grid-area: footer;
+  }
+
+  .grid-container > div {
+    background-color: #F2E9EB;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+
+  .profile-picture {
+    margin: 20px;
+    width: 180px;
+    height: 250px;
+    border-radius: 50%; /* Muuttaa kuvan soikeaksi */
+    overflow: hidden; /* Piilottaa mahdolliset ylimääräiset osat */
+  }
+  .profile-picture img {
+    width: 110%;
+    height: auto;
+    display: block;
+  }
+
+
   h1, h2, h3 {
     color: #DD8EA4;
-    font-family: 'Sofia', cursive;
+    font-family: 'Sofia', cursive; 
   }
-  h1 {
-    font-size: 3em;
-  }
+
+
   ul {
     list-style-type: none;
     padding: 0;
   }
   li {
-    margin-bottom: 10px;
+    margin-bottom: 0.2em;
     color: #31383F;
+    font-size: 0.7em;
+    
   }
-  .section1 {
 
-    margin-bottom: 20px;
-    margin-right: 3em;
-  }
-  .section2 {
-    margin-bottom: 20px;
-    margin-right: 3em;
 
-  }
-  .buttons {
-    margin-bottom: 20px;
-    margin-right: 3em;
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
+
+
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .grid-container  {
+    grid-template-areas: 
+      'header header header header header header'
+      'menu menu menu menu menu menu'
+      'right right right right right right'
+      'left left left left left left'  
+      'footer footer footer footer footer footer';
+      padding: 0em;
+      margin: 0em;
   }
-  footer {
-    background-color: #31383F;
-    color: #fff;
+
+  .grid-container > div {
+    background-color: #F2E9EB;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 0;
+    font-size: 1.3em;
   }
 
-  .button {
-    display: inline-block;
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 20px; /* Pyöristetty kulmat */
-    transition: background-color 0.3s;
-    position: relative;
-    grid-column: span 2;
-
-  }
-  
-  .button:hover {
-    background-color: #45a049; /* Värin vaihto hiiren ollessa päällä */
+  .grid-item1 {
+    padding: 0em;
   }
 
-  .profile-picture {
-    width: 170px;
-    height: 250px;
-    border-radius: 50%; /* Muuttaa kuvan soikeaksi */
-    overflow: hidden; /* Piilottaa mahdolliset ylimääräiset osat */
-  }
-  
-  .profile-picture img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  
+}
