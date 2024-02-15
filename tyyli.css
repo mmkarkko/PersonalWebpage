@@ -85,39 +85,20 @@ body {
     
   }
 
-.btn{
-font-family: 'Sofia';
-font-weight: 200;
-font-size: 27px;
-color: #31383f;
-background-color: #dd8ea4;
-padding: 19px 34px;
-border: none;
-box-shadow: rgb(49, 56, 63) 0px 0px 46px 0px;
-border-radius: 17px;
-transition : 2586ms;
-transform: translateY(0);
-display: flex;
-flex-direction: row;
-align-items: center;
-cursor: pointer;
-}
 
-.btn:hover{
-transition : 2586ms;
-padding: 10px 42px;
-transform : translateY(-0px);
-background-color: #fedd89;
-color: #31383f;
-border: none;
-
-}
-
-</style>
-
-<!-- 2️⃣code HTML below -->
-<button class="btn">Koulutus</button>
-
+  .grid-item2 button {
+    background-color: #FEDD89;
+    font-family: 'Sofia',cursive;
+    color: #31383F;
+    border: none;
+    font-size: 31px;
+    height: 180px;
+    width: 180px;
+    box-shadow: 0 2px 4px darkslategray;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
 
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------*/
