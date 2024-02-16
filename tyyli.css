@@ -24,31 +24,38 @@ body {
     background-color: #F2E9EB;
     display: grid;
     grid-template-areas:
-      'header header header header header header'
+      'menu menu header header header header'
       'menu menu left left right right'
       'footer footer footer footer footer footer';
     gap: 10px;
-    padding: 1em;
-    margin: 4em;
+    padding-left: 5em;
+    padding-right: 5em;
+    margin-right: 10em;
+    margin-left: 10em;
+    margin-top: 5em;
+    margin-bottom: 2em;
     grid-column-gap: 1em;
     height: max-content;
     text-align: center;
   }
 
   .grid-item1 {
+    display:flex;
     grid-area: header;
-    
+    text-align: left;
+
   }
 
-  .grid-item1 h1 {
-
-    padding: 0;
-    margin: 0;
+  .grid-item1 h2 {
+    font-size: 2.3em;
+    padding-top: 2em;
+    padding-left: 1em;
   }
 
   .grid-item2 {
     grid-area: menu;
     padding-left: 1em;
+    padding-top: 2em;
     padding-right: 1em;
     max-width: 100%;
 
@@ -65,23 +72,26 @@ body {
     text-align: left;
     font-size: 1em;
     color: #31383F;
+    text-align: justify;
   }
 
   .grid-item4 {
     grid-area: right;
+    align-items: center;
   }
 
   .grid-item5 {
     grid-area: footer;
+    padding-top: 1em;
+    padding-bottom: 2em;
   }
 
 
   .profile-picture {
     margin-left: 1.5em;
-    margin-right: 1.5em;
-  }
-  .profile-picture img {
-    max-height: 13em;
+    margin-right: 2.5em;
+    max-height: 20em;
+
   }
 
 
@@ -116,6 +126,74 @@ body {
   }
 
 
+  /* ------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+  /* Responsive layout for small display*/
+  @media  only screen and (max-width: 1700px) {
+
+    .grid-container {
+      padding-left: 4em;
+      padding-right: 4em;
+      margin-right: 8em;
+      margin-left: 8em;
+      margin-top: 2em;
+      margin-bottom: 2em;
+      grid-column-gap: 0.5em;
+      height: max-content;
+      text-align: center;
+
+    }
+
+    .grid-item1 {
+      max-height: fit-content;
+    }
+
+
+    .grid-item1 h2 {
+      font-size: 2em;
+      padding-top: 1.5em;
+      padding-left: 1em;
+    }
+  
+    .grid-item2 button {
+      font-size: 20px;
+      height: 130px;
+      width: 130px;
+      box-shadow: 0 2px 3px darkslategray;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      margin-left: 2em;
+      margin-right: 1em;
+      margin-bottom: 0.5em;
+      margin-top: 1em;
+    }
+  
+    .grid-item3 p {
+      padding-left: 1.5em;
+      margin-right: 1.5em;
+      text-align: left;
+      font-size: 0.9em;
+      text-align: justify;
+    }
+  
+    .profile-picture {
+      margin-left: 1em;
+      margin-right: 2em;
+    }
+    .profile-picture img {
+      max-height: 12em;
+  
+    }
+  
+  }
+
 
   
   /* ------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -132,7 +210,7 @@ body {
   .grid-container {
     gap: 6px;
     padding: 0.5em;
-    margin: 1em;
+    margin: 2em;
     grid-column-gap: 0.5em;
     height: max-content;
   }
@@ -145,24 +223,25 @@ body {
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.2s ease;
-    margin-left: 1em;
+    margin-left: 2em;
     margin-right: 1em;
     margin-bottom: 0.5em;
   }
 
   .grid-item3 p {
-    padding-left: 1em;
-    margin-right: 1em;
+    padding-left: 1.5em;
+    margin-right: 1.5em;
     text-align: left;
     font-size: 0.9em;
+    text-align: justify;
   }
 
   .profile-picture {
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+    margin-left: 1em;
+    margin-right: 2em;
   }
   .profile-picture img {
-    max-height: 11em;
+    max-height: 12em;
 
   }
 
@@ -207,11 +286,12 @@ body {
     margin-right: 1em;
     text-align: left;
     font-size: 0.9em;
+    text-align: justify;
   }
 
   .profile-picture {
     margin-left: 0.5em;
-    margin-right: 0.5em;
+    margin-right: 1em;
   }
   .profile-picture img {
     max-height: 11em;
@@ -283,6 +363,7 @@ body {
       margin-right: 0.5em;
       text-align: left;
       font-size: 0.9em;
+      text-align: justify;
     }
   
     .profile-picture {
@@ -306,7 +387,7 @@ body {
 
 
 
-  /* Responsive layout for cellphone*/
+  /* Responsive layout for cellphone*/                 /* not working.................................*/
 @media only screen and (max-width: 554px) {
   .grid-container  {
       padding: 0em;
@@ -329,12 +410,12 @@ body {
 
 
 
-  .grid-item3 p {
+  .grid-item3 p {   /* not working.................................*/
     padding-left: 0.5em;
     margin-right: 0.5em;
-    text-align: left;
     font-size: 0.9em;
     max-width: 100%;
+    text-align: justify; 
   }
 
 
