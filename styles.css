@@ -99,12 +99,15 @@ a:hover:after {
 }
 
 .navbar {
+    position: fixed;
     float: left;
     width: 20%;
+    height: 100%;
     text-align: left;
     margin: 0;
     padding: 0;
     border-right: 1px solid white;
+    overflow-y: auto;
 }
 
 .main {
@@ -112,6 +115,8 @@ a:hover:after {
     float: right;
     padding-left: 5em;
     margin: 0;
+    margin-left: 20%;
+    padding-top: 20px;
 }
 
 
