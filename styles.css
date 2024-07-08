@@ -1,0 +1,62 @@
+body {
+    background-color: black;
+    color: #fff;
+}
+
+
+ul {
+    display: table;
+    list-style: none;   
+}
+
+li {
+    display: table;
+    position: relative;
+    padding: 15px 0;
+} 
+
+a {
+    color: #fff;
+    font-family: "Anton SC", sans-serif;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    position: relative;
+}
+
+a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 3px;
+    left: 50%;
+    position: absolute;
+    background: #682363;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+
+
+  a:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+
+.main h1 {
+    color: white;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10em;
+}
+
+.main p {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.5em;
+}
+
