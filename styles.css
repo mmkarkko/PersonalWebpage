@@ -8,16 +8,6 @@ body {
     margin: 0;
 }
 
-.upper {
-    list-style: none;
-}
-
-
-.lower {
-    display: block;
-    list-style: none;   
-}
-
 
 li {
     display: block;
@@ -39,7 +29,6 @@ li p {
 .upper img {
     max-width: 50%;
     height: auto;
-
     margin: 0;
 }
 
@@ -73,27 +62,6 @@ li p {
     left: 0; 
   }
 
-.main h1 {
-    color: white;
-    font-family: "Anton SC", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 3em;
-    letter-spacing: 0.2em;
-    margin: 0;
-    margin-top: 6em;
-}
-
-
-.main p {
-    font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 1.5em;
-    margin: 0;
-    margin: 1em 10em 1em 0;
-}
 
 .divcontainer:after{
     content: "";
@@ -111,15 +79,6 @@ li p {
     padding: 0;
     border-right: 1px solid white;
     overflow-y: auto;
-}
-
-.main {
-    width: 80%;
-    float: right;
-    padding-left: 5em;
-    margin: 0;
-    margin-left: 20%;
-    padding-top: 20px;
 }
 
 
@@ -146,4 +105,103 @@ li p {
     height: auto;
 }
 
+.main {
+    width: 80%;
+    float: right;
+    margin: 0;
+}
+
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+    background-image: url("/Pics/purpleBG.png");
+    padding: 10em 1em 2em 2em; /* top - right - bottom - left */
+    margin: 5em 8em 0em 4em; /* top - right - bottom - left */
+}
+
+.header-container p {
+    color: white;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3em;
+    letter-spacing: 0.2em;
+    margin: 0;
+}
+
+.content-about {
+    
+}
+
+.content-about p{
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.5em;
+    margin: 0;
+    margin: 2em 8em 12em 3em;  /* top - right - bottom - left */
+    text-align: left;
+}
+
+/* For centering the animated scroll-icon */
+.scroll-icon-container {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+/* Scroll-element animation */
+@keyframes scroll {
+    0%   { transform: translateY(0); opacity: 1; } /* At start icon is in it original place */
+    25%  { opacity: 1; } /* Opacity has changed whereas location is still the same */
+    75%  { transform: translateY(.75em); opacity: 0; }
+    100% { transform: translateY(0); opacity: 0; }
+  }
+  
+  .scroll-icon__dot {
+    display: block;
+    position: absolute;
+    left: 50%;
+    background: #fff;
+    height: .5em;
+    width: .5em;
+    top: .6em;
+    margin-left: -.25em;
+    border-radius: 50%;
+    transform-origin: top center;
+    backface-visibility: hidden;
+    animation: scroll 2s ease-out infinite;
+  }
+  
+  /* General icon style */
+  .scroll-icon {
+    display: block;
+    position: relative;
+    height: 3em;
+    width: 2em;
+    border: .25em solid #fff;
+    border-radius: 1em;
+    margin: 0;
+  }
+
+
+.div-line {
+    border-top: 1px solid #fff;
+    margin-top: 3em;
+}
+
+.content-skills {
+
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.5em;
+    margin: 0;
+    margin: 2em 8em 0em 3em;  /* top - right - bottom - left */
+}
+  
 
