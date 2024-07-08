@@ -78,8 +78,10 @@ li p {
     font-family: "Anton SC", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 10em;
+    font-size: 3em;
+    letter-spacing: 0.2em;
     margin: 0;
+    margin-top: 6em;
 }
 
 
@@ -90,6 +92,7 @@ li p {
     font-style: normal;
     font-size: 1.5em;
     margin: 0;
+    margin: 1em 10em 1em 0;
 }
 
 .divcontainer:after{
