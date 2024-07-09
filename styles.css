@@ -80,7 +80,7 @@ li p {
     text-align: left;
     margin: 0;
     padding: 2em 0;
-    border-right: 1px solid white;
+    border-right: 1px solid #fff;
     overflow-y: auto;
 }
 
@@ -128,7 +128,7 @@ li p {
 }
 
 .header-container p {
-    color: white;
+    color: #fff;
     font-family: "Anton SC", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -145,17 +145,38 @@ li p {
     margin: 0;
 }
 
-
-/* CONTENT ABOUT --------------------------------------------------------- */
-.content-about p {
+/* Brief info text on landing */
+.content-header p {
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
     font-size: 1.5em;
+    color: #BEBEBE;
     margin: 0;
     margin: 2em 8em 12em 3em;  /* top - right - bottom - left */
     text-align: left;
+}
+
+/* Subheaders in sections */
+.content-about, .content-skills, .content-exp, .content-edu, .content-links {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.5em;
+    margin: 2em 8em 0em 3em;  /* top - right - bottom - left */
+}
+
+/* Content general texts */
+.content-text {
+    color: #BEBEBE;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.8em;
+    margin: 0;
 }
 
 
@@ -174,7 +195,7 @@ li p {
     100% { transform: translateY(0); opacity: 0; }
 }
   
-  .scroll-icon__dot {
+.scroll-icon__dot {
     display: block;
     position: absolute;
     left: 50%;
@@ -190,7 +211,7 @@ li p {
 }
   
   /* General icon style */
-  .scroll-icon {
+.scroll-icon {
     display: block;
     position: relative;
     height: 3em;
@@ -204,19 +225,20 @@ li p {
 /* DIVIDER LINE --------------------------------------------------------- */
 .div-line {
     border-top: 1px solid #fff;
-    margin-top: 3em;
+    margin-top: 5em;
 }
+
+
+/* CONTENT ABOUT-------------------------------------------------------- */
+
+
+.content-about p {
+    margin-top: 1em;
+}
+
 
 
 /* CONTENT SKILLS -------------------------------------------------------- */
-.content-skills {
-    font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 1.5em;
-    margin: 2em 8em 0em 3em;  /* top - right - bottom - left */
-}
 
 
 /* Skill bars ------------------------------------------------------------- */
@@ -225,13 +247,20 @@ li p {
     display: flex;
     margin: 0;
     flex-wrap: wrap;
-    /* gap: 2em; */
+    gap: 2em;
+}
 
+#skills {
+    padding-bottom: 1em;
 }
 
 .skill {
     flex: 1 1 20%;
-    min-width: 250px;
+    margin: 0 1.5em 0 0;   /* top - right - bottom - left */
+}
+
+.skill-name {
+    margin: 0;
 }
 
 .skill-bar {
@@ -239,16 +268,17 @@ li p {
     background-color: #ddd;
     margin: 10px 0;
     overflow: hidden;
-  }
+}
   
-  .skill-bar-fill {
+.skill-bar-fill {
     height: 24px;
     background-color: #682363;
     width: 0;
     text-align: right;
-    line-height: 24px;
+    line-height: 20px;
     color: white;
     padding-right: 5px;
     transition: width 0.5s;
-  }
+}
+
   
