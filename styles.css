@@ -281,4 +281,24 @@ li p {
     transition: width 0.5s;
 }
 
+
+/* CONTENT EDUCATION -------------------------------------------------------- */
+.column-container {
+    display: flex;
+    width: 100%;
+    gap: 4em;
+}
+
+.left {
+    float: left;
+    width: 50%;
+    margin-top: 1em;
+    list-style: 1px ;
+}
+
+.right {
+    width: auto;
+    float: right;
+    margin-top: 1em;
+}
   
