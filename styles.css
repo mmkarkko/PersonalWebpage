@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-  }
+}
 
 body {
     background-color: black;
@@ -8,8 +8,8 @@ body {
     margin: 0;
 }
 
-/* LIST in navbar ---------------------------------------------------------- */
 
+/* LIST in navbar ---------------------------------------------------------- */
 li {
     display: block;
     position: relative;
@@ -19,7 +19,7 @@ li {
     align-items: center;
 } 
 
-
+/* Name header in navbar */
 li p {
     font-family: "Anton SC", sans-serif;
     letter-spacing: 0.15em;
@@ -33,8 +33,8 @@ li p {
     margin: 0;
 }
 
-/* NAVBAR LINKS --------------------------------------------------- */
 
+/* NAVBAR LINKS --------------------------------------------------- */
 .lower a, .upper a {
     color: #fff;
     font-family: "Anton SC", sans-serif;
@@ -57,14 +57,12 @@ li p {
     background: #682363;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
-  }
-
+}
 
 .lower a:hover:after, .upper a:hover:after { 
     width: 100%; 
     left: 0; 
-  }
-
+}
 
 .divcontainer:after{
     content: "";
@@ -72,8 +70,8 @@ li p {
     clear: both;
 }
 
-/* NAVBAR --------------------------------------------------------- */
 
+/* NAVBAR --------------------------------------------------------- */
 .navbar {
     position: fixed;
     float: left;
@@ -116,9 +114,10 @@ li p {
     width: 80%;
     float: right;
     margin: 0;
+    padding: 0;
 }
 
-
+/* Large header on landing */
 .header-container {
     display: flex;
     flex-direction: column;
@@ -138,20 +137,17 @@ li p {
     margin: 0;
 }
 
+/* Subheaders on sections like About, Skills etc. */
 .subheader {
     font-family: "Anton SC", sans-serif;
     letter-spacing: 0.15em;
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 0;
 }
 
 
 /* CONTENT ABOUT --------------------------------------------------------- */
-.content-about {
-    
-}
-
-.content-about p{
+.content-about p {
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
@@ -176,7 +172,7 @@ li p {
     25%  { opacity: 1; } /* Opacity has changed whereas location is still the same */
     75%  { transform: translateY(.75em); opacity: 0; }
     100% { transform: translateY(0); opacity: 0; }
-  }
+}
   
   .scroll-icon__dot {
     display: block;
@@ -191,7 +187,7 @@ li p {
     transform-origin: top center;
     backface-visibility: hidden;
     animation: scroll 2s ease-out infinite;
-  }
+}
   
   /* General icon style */
   .scroll-icon {
@@ -202,7 +198,8 @@ li p {
     border: .25em solid #fff;
     border-radius: 1em;
     margin: 0;
-  }
+}
+
 
 /* DIVIDER LINE --------------------------------------------------------- */
 .div-line {
@@ -210,16 +207,48 @@ li p {
     margin-top: 3em;
 }
 
+
 /* CONTENT SKILLS -------------------------------------------------------- */
-
 .content-skills {
-
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
     font-size: 1.5em;
-    margin: 0;
     margin: 2em 8em 0em 3em;  /* top - right - bottom - left */
 }
+
+
+/* Skill bars ------------------------------------------------------------- */
+.skills-container {
+    width: 100%;
+    display: flex;
+    margin: 0;
+    flex-wrap: wrap;
+    /* gap: 2em; */
+
+}
+
+.skill {
+    flex: 1 1 20%;
+    min-width: 250px;
+}
+
+.skill-bar {
+    width: 250px;
+    background-color: #ddd;
+    margin: 10px 0;
+    overflow: hidden;
+  }
+  
+  .skill-bar-fill {
+    height: 24px;
+    background-color: #682363;
+    width: 0;
+    text-align: right;
+    line-height: 24px;
+    color: white;
+    padding-right: 5px;
+    transition: width 0.5s;
+  }
   
