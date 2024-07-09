@@ -8,6 +8,7 @@ body {
     margin: 0;
 }
 
+/* LIST in navbar ---------------------------------------------------------- */
 
 li {
     display: block;
@@ -31,6 +32,8 @@ li p {
     height: auto;
     margin: 0;
 }
+
+/* NAVBAR LINKS --------------------------------------------------- */
 
 .lower a, .upper a {
     color: #fff;
@@ -69,6 +72,8 @@ li p {
     clear: both;
 }
 
+/* NAVBAR --------------------------------------------------------- */
+
 .navbar {
     position: fixed;
     float: left;
@@ -76,13 +81,13 @@ li p {
     height: 100%;
     text-align: left;
     margin: 0;
-    padding: 0;
+    padding: 2em 0;
     border-right: 1px solid white;
     overflow-y: auto;
 }
 
 
-/* Social media buttons */
+/* Social media buttons --------------------------------------------------- */
 .some {
     display: flex;
     margin-top: 2em;
@@ -105,6 +110,8 @@ li p {
     height: auto;
 }
 
+
+/* MAIN --------------------------------------------------- */
 .main {
     width: 80%;
     float: right;
@@ -131,6 +138,15 @@ li p {
     margin: 0;
 }
 
+.subheader {
+    font-family: "Anton SC", sans-serif;
+    letter-spacing: 0.15em;
+    font-size: 2em;
+    margin: 0;
+}
+
+
+/* CONTENT ABOUT --------------------------------------------------------- */
 .content-about {
     
 }
@@ -146,7 +162,8 @@ li p {
     text-align: left;
 }
 
-/* For centering the animated scroll-icon */
+
+/* For centering the animated scroll-icon ----------------------------------------------------  */
 .scroll-icon-container {
     display: flex;
     justify-content: center;
@@ -187,11 +204,13 @@ li p {
     margin: 0;
   }
 
-
+/* DIVIDER LINE --------------------------------------------------------- */
 .div-line {
     border-top: 1px solid #fff;
     margin-top: 3em;
 }
+
+/* CONTENT SKILLS -------------------------------------------------------- */
 
 .content-skills {
 
@@ -204,4 +223,3 @@ li p {
     margin: 2em 8em 0em 3em;  /* top - right - bottom - left */
 }
   
-
