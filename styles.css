@@ -289,16 +289,20 @@ li p {
     gap: 4em;
 }
 
-.left {
+.left-edu {
     float: left;
     width: 50%;
-    margin-top: 1em;
-    list-style: 1px ;
+    margin-top: 1em;    
+    padding: 0 0 0 1em;  /* top - right - bottom - left */
+    border-left: 3px solid #682363;
 }
 
-.right {
-    width: auto;
+.right-edu {
     float: right;
-    margin-top: 1em;
+    width: 50%;
+    margin-top: 0.8em;    
+    padding: 0 0 0 1em;  /* top - right - bottom - left */
+    border-left: 3px solid #682363;
 }
-  
+
+
