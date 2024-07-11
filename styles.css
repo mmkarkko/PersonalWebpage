@@ -9,73 +9,6 @@ body {
 }
 
 
-/* LIST in navbar ---------------------------------------------------------- */
-li {
-    display: block;
-    position: relative;
-    padding: 15px;
-    margin: 0;
-    display: flex;
-    align-items: center;
-} 
-
-/* Name header in navbar */
-li p {
-    font-family: "Anton SC", sans-serif;
-    letter-spacing: 0.15em;
-    font-size: 2em;
-    margin: 0;
-}
-
-.upper img {
-    max-width: 50%;
-    height: auto;
-    margin: 0;
-}
-
-
-/* NAVBAR LINKS --------------------------------------------------- */
-.lower a, .upper a {
-    color: #fff;
-    font-family: "Anton SC", sans-serif;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    text-decoration: none;
-    display: inline-block;
-    position: relative;
-    margin: 0;
-}
-
-.upper a:hover, .lower a:hover {
-    color: #682363;
-    transition: 0.3s ease 0s;
-}
-
-.lower a:after, .upper a:after {   
-    background: none repeat scroll 0 0 transparent;
-    bottom: -3px;
-    content: "";
-    display: block;
-    height: 3px;
-    left: 50%;
-    position: absolute;
-    background: #682363;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
-}
-
-.lower a:hover:after, .upper a:hover:after { 
-    width: 100%; 
-    left: 0;
-}
-
-.divcontainer:after{
-    content: "";
-    display: table;
-    clear: both;
-}
-
-
 /* NAVBAR --------------------------------------------------------- */
 .navbar {
     position: fixed;
@@ -90,27 +23,73 @@ li p {
 }
 
 
-/* Social media buttons --------------------------------------------------- */
-.some {
+/* LIST in navbar ---------------------------------------------------------- */
+li {
+    display: block;
+    position: relative;
+    padding: 15px;
+    margin: 0;
     display: flex;
-    margin-top: 2em;
+    align-items: center;  
+} 
+
+.upper-container {
+    content: "";
+    display: table;
+    clear: both;
+    display: flex;
+    flex-direction: row;  
+    margin: 5em 5em 3em 4em;   
+    height: 200px;
+    position: relative;
 }
 
-.some-buttons:hover, .some-buttons-li:hover {
-    opacity: 0.7;
+.smallprofilepic-container {
+    width: 68%;
+    overflow: hidden; /* To hide picture overflow */
 }
 
-.some-buttons-li {
+#smallprofilepic{
+    height: 140%; /* zooming to be the right size */
+    width: auto;
+    transform: translateX(-8%) translateY(-2%); /* Moving picture a bit inside the container */
+}
+
+
+/* NAVBAR LINKS --------------------------------------------------- */
+.links a {
     color: #fff;
-    font-family: sans-serif;
-    font-weight: 600;
-    font-size: 35px;
+    font-family: "Anton SC", sans-serif;
+    letter-spacing: 0.15em;
+    font-size: 1.5em;
+    text-transform: uppercase;
     text-decoration: none;
+    display: inline-block;
+    position: relative;
+    margin: 0;
 }
 
-.some-buttons img {
-    width: 30px;
-    height: auto;
+.links a:hover {
+    color: #682363;
+    transition: 0.3s ease 0s;
+}
+
+.links a:after {   
+    background: none repeat scroll 0 0 transparent;
+    bottom: -3px;
+    content: "";
+    display: block;
+    height: 3px;
+    left: 50%;
+    position: absolute;
+    background: #682363;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.links a:hover:after { 
+    width: 100%; 
+    left: 0;
 }
 
 
@@ -139,7 +118,7 @@ li p {
     display: flex;
     flex-direction: row;
     margin: 5em 5em 5em 3em;   
-    height: 700px;
+    height: 680px;
     position: relative;
 }
 
@@ -161,19 +140,41 @@ li p {
     width: 50%;
     position: absolute;
     bottom: 5em;
-    right: 2em;
+    right: 5em;
     margin: 0;
     padding: 2em;
   }
 
-/* Allcaps slogan on home picture */
-.slogan {
+  /* ALLCAPS name on home */
+  .name {
     color: #fff;
     font-family: "Anton SC", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 3em;
     letter-spacing: 0.1em;
+    margin-bottom: 0;
+  }
+
+/* Allcaps slogan on home picture */
+.slogan {
+    opacity: 0%;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4em;
+    letter-spacing: 0.1em;
+    margin-top: 0;
+    text-decoration: 10px underline;
+    animation-name: slogan-animation;
+    animation-delay: 1s;
+    animation-duration: 4s;
+    animation-fill-mode: forwards; /* Keeps the final state of animation (in this case opacity 100%) */
+}
+
+@keyframes slogan-animation {
+    from { opacity: 0%; } 
+    to { opacity: 100%; }
 }
 
 /* Explanatory slogan on home picture */
@@ -192,7 +193,7 @@ li p {
     overflow: hidden; /* To hide picture overflow */
 }
 
-#profilepic {
+#profilepic_big {
     height: 130%; /* zooming to be the right size */
     width: auto;
     transform: translateX(-5%) translateY(-12%); /* Moving picture a bit inside the container */
@@ -208,9 +209,8 @@ li p {
 }
 
 
-
 /* Subheaders in sections */
-.content-about, .content-skills, .content-exp, .content-edu, .content-links {
+.content-about, .content-skills, .content-exp, .content-edu {
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
@@ -218,6 +218,7 @@ li p {
     font-size: 1.5em;
     margin: 2em 8em 0em 3em;  /* top - right - bottom - left */
 }
+
 
 /* Content general texts */
 .content-text {
@@ -231,46 +232,61 @@ li p {
 }
 
 
-
 /* For centering the animated scroll-icon ----------------------------------------------------  */
 .scroll-icon-container {
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
-    margin: 0;
+    align-items: center;
+    height: 2vh;
+    background: #000;
 }
 
-/* Scroll-element animation */
-@keyframes scroll {
-    0%   { transform: translateY(0); opacity: 1; } /* At start icon is in it original place */
-    25%  { opacity: 1; } /* Opacity has changed whereas location is still the same */
-    75%  { transform: translateY(.75em); opacity: 0; }
-    100% { transform: translateY(0); opacity: 0; }
-}
-  
-.scroll-icon__dot {
-    display: block;
-    position: absolute;
-    left: 50%;
-    background: #fff;
-    height: .5em;
-    width: .5em;
-    top: .6em;
-    margin-left: -.25em;
-    border-radius: 50%;
-    transform-origin: top center;
-    backface-visibility: hidden;
-    animation: scroll 2s ease-out infinite;
-}
-  
-  /* General icon style */
 .scroll-icon {
-    display: block;
     position: relative;
-    height: 3em;
-    width: 2em;
-    border: .25em solid #fff;
-    border-radius: 1em;
-    margin: 0;
+    width: 25px;
+    height: 25px;
+    transform: rotate(45deg);
+}
+
+.scroll-icon span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    border: none;
+    display: block;
+    border-right: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    border-radius: 8% 5%;
+    width: 100%;
+    height: 100%;
+    animation: animate 2s linear infinite;
+}
+
+.scroll-icon span:nth-child(1)  {
+    top: -7.5px;
+    left: -7.5px;
+    animation-delay: 0s;
+}
+
+.scroll-icon span:nth-child(2)  {
+    top: -0px;
+    left: -0px;
+    animation-delay: 0.4s;
+}
+
+.scroll-icon span:nth-child(3)  {
+    top: 7.5px;
+    left: 7.5px;
+    animation-delay: 0.8s;
+}
+
+@keyframes animate {
+    0% {border-color: #fff; transform: translate(0,0);}
+    25% {border-color:  #fff; transform: translate(7.5px,7.5px);}
+    25.1%, 100% {border-color: #222}
 }
 
 
@@ -282,17 +298,12 @@ li p {
 
 
 /* CONTENT ABOUT-------------------------------------------------------- */
-
-
 .content-about p {
     margin-top: 1em;
 }
 
 
-
 /* CONTENT SKILLS -------------------------------------------------------- */
-
-
 /* Skill bars ------------------------------------------------------------- */
 .skills-container {
     width: 100%;
@@ -423,3 +434,35 @@ li p {
     font-size: 0.8em;
 }
 
+
+/* Social media buttons --------------------------------------------------- */
+
+.some-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #682363;
+}
+
+.some {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2em;
+    background-color: pink;
+}
+
+.some-buttons:hover, .some-buttons-li:hover {
+    opacity: 0.7;
+}
+
+.some-buttons-li {
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+    text-decoration: none;
+}
+
+.some-buttons img {
+    width: 30px;
+    height: auto;
+}
