@@ -122,27 +122,84 @@ li p {
     padding: 0;
 }
 
-/* Large header on landing */
-.header-container {
-    display: flex;
+/* Container for home header and mouse animation */
+.container {
+    display: table;
     flex-direction: column;
-    margin-top: 3em;
-    background-image: url("/Pics/purpleBG.png");
-    padding: 10em 1em 2em 2em; /* top - right - bottom - left */
-    margin: 5em 8em 0em 4em; /* top - right - bottom - left */
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
-.header-container p {
+/* Container for home header contents */
+.header-container {
+    content: "";
+    display: table;
+    clear: both;
+    display: flex;
+    flex-direction: row;
+    margin: 5em 5em 5em 3em;   
+    height: 700px;
+    position: relative;
+}
+
+/* Home bic picture */
+.header-container::before {
+    content : ""; 
+    position: absolute;
+    width : 100%;
+    height : 100%;
+    top: 0;  
+    left: 0; 
+    background:  url(/Pics/binary101.png) repeat-x fixed top center, linear-gradient(black, #682363) fixed;
+    opacity: 60%;
+    z-index: -1;
+  }
+
+  /* Container for home picture slogans */
+  .slogans {
+    width: 50%;
+    position: absolute;
+    bottom: 5em;
+    right: 2em;
+    margin: 0;
+    padding: 2em;
+  }
+
+/* Allcaps slogan on home picture */
+.slogan {
     color: #fff;
     font-family: "Anton SC", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 3em;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.1em;
+}
+
+/* Explanatory slogan on home picture */
+.subslogan {
+    color: #fff;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.5em;
     margin: 0;
 }
 
-/* Subheaders on sections like About, Skills etc. */
+.piccontainer {
+    width: 40%;
+    overflow: hidden; /* To hide picture overflow */
+}
+
+#profilepic {
+    height: 130%; /* zooming to be the right size */
+    width: auto;
+    transform: translateX(-5%) translateY(-12%); /* Moving picture a bit inside the container */
+}
+
+
+/* Subheaders on sections like About, Skills etc. ------------------ */
 .subheader {
     font-family: "Anton SC", sans-serif;
     letter-spacing: 0.15em;
@@ -150,18 +207,7 @@ li p {
     margin: 0;
 }
 
-/* Brief info text on landing */
-.content-header p {
-    font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 1.5em;
-    color: #BEBEBE;
-    margin: 0;
-    margin: 2em 8em 12em 3em;  /* top - right - bottom - left */
-    text-align: left;
-}
+
 
 /* Subheaders in sections */
 .content-about, .content-skills, .content-exp, .content-edu, .content-links {
@@ -183,6 +229,7 @@ li p {
     font-size: 0.8em;
     margin: 0;
 }
+
 
 
 /* For centering the animated scroll-icon ----------------------------------------------------  */
@@ -284,7 +331,7 @@ li p {
     width: 0;
     text-align: right;
     line-height: 24px;
-    color: white;
+    color: #fff;
     padding-right: 5px;
     transition: width 0.5s;
 }
@@ -336,7 +383,7 @@ li p {
   
 .collapsible:after {
     content: '\25BC';
-    color: white;
+    color: #fff;
     font-weight: bold;
     float: right;
     margin-left: 5px;
