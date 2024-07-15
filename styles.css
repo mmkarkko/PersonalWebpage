@@ -24,7 +24,7 @@ body {
 
 
 /* LIST in navbar ---------------------------------------------------------- */
-li {
+.links li {
     display: block;
     position: relative;
     padding: 15px;
@@ -206,11 +206,12 @@ li {
     letter-spacing: 0.15em;
     font-size: 1.5em;
     margin: 0;
+    padding: 0;
 }
 
 
-/* Subheaders in sections */
-.content-about, .content-skills, .content-exp, .content-edu {
+/* Contents in sections */
+.content-about, .content-skills, .content-exp, .content-edu, .some-container {
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
@@ -372,6 +373,7 @@ li {
 }
 
 
+/* CONTENT - EXPERIENCE  -------------------------------------------------------------*/
 /* Collapsible-work information ------------------------------------------------- */
 .collapsible {
     font-family: "Raleway", sans-serif;
@@ -404,22 +406,31 @@ li {
     content: "\25B2";
 }
 
-
-
 .content {
     width: 80%;
+    height: 100%;
+    padding-left: 1em;
     font-family: "Raleway", sans-serif;
     font-weight: 300;
     font-size: 0.8em;
     text-wrap: wrap;
-    padding: 0 18px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     background-color: #0a0a0a;
 }
 
-.work-info {
+.work-info:nth-child(1) {
+    font-family: "Anton SC", sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.15em;
+    font-size: 0.8em;
+    margin: 0;
+    padding-top: 1em;
+}
+
+
+.work-info:nth-child(2) {
     font-family: "Raleway", sans-serif;
     font-weight: bold;
     letter-spacing: 0.15em;
@@ -430,24 +441,55 @@ li {
 
 .work-text {
     font-family: "Raleway", sans-serif;
-    font-weight: 300;
+    font-weight: normal;
     font-size: 0.8em;
+    letter-spacing: 0.15em;
+    padding-left: 1em;
+    padding-bottom: 1em;
+    padding-top: 0.7em;
+}
+
+.work-list-container {
+    height: 100%;
+}
+
+.work-list {
+    font-family: "Raleway", sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.15em;
+    font-size: 0.8em;
+    margin: 0;
+    list-style: disc;
+    width: 80%;
+    height: 100%;
+    margin-bottom: 1em;
+    margin-top: 1em
+}
+
+.work-list li {
+    padding-top: 0.7em;
+}
+
+.work-list li:nth-child(6) {
+    list-style: none;
+    font-weight: bold;
+    padding-top: 1.5em;
+}
+
+.work-list li:last-child {
+    padding-bottom: 1em;
 }
 
 
+/* CONTENT-LINKS */
 /* Social media buttons --------------------------------------------------- */
-
-.some-container {
-    display: flex;
-    flex-direction: column;
-    background-color: #682363;
-}
-
 .some {
     display: flex;
     flex-direction: row;
     margin-top: 2em;
-    background-color: pink;
+    list-style: none;
+    gap: 2em;
+    margin-bottom: 3em;
 }
 
 .some-buttons:hover, .some-buttons-li:hover {
@@ -463,6 +505,6 @@ li {
 }
 
 .some-buttons img {
-    width: 30px;
+    width: 35px;
     height: auto;
 }
