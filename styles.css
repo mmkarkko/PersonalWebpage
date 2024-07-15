@@ -210,7 +210,7 @@ body {
 }
 
 
-/* Contents in sections */
+/* Contents text in sections */
 .content-about, .content-skills, .content-exp, .content-edu, .some-container {
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
@@ -242,6 +242,8 @@ body {
     align-items: center;
     height: 2vh;
     background: #000;
+    padding-bottom: 5em;
+    padding-top: 3em;
 }
 
 .scroll-icon {
@@ -249,6 +251,7 @@ body {
     width: 25px;
     height: 25px;
     transform: rotate(45deg);
+
 }
 
 .scroll-icon span {
@@ -328,7 +331,7 @@ body {
 }
 
 .skill-bar {
-    width: 250px;
+    width: 300px;
     background-color: #ddd;
     margin: 10px 0;
     overflow: hidden;
@@ -350,26 +353,103 @@ body {
 
 
 /* CONTENT EDUCATION -------------------------------------------------------- */
-.column-container {
-    display: flex;
-    width: 100%;
-    gap: 4em;
+#education {
+    margin-bottom: 1em;
 }
 
-.left-edu {
+.content-edu {
+    width: 80%;
+}
+
+/* Edu-section right and left alternating educations */
+.edu-even-and-odd:before, .edu-even-and-odd:after {
+	content: " ";
+	display: table;
+}
+
+.edu-even-and-odd:after { 
+    clear: both;
+}
+
+.left { 
     float: left;
-    width: 50%;
-    margin-top: 1em;    
-    padding: 0 0 0 1em;  /* top - right - bottom - left */
-    border-left: 3px solid #682363;
+    padding-bottom: 2em;
 }
 
-.right-edu {
+.right {
     float: right;
-    width: 50%;
-    margin-top: 0.8em;    
-    padding: 0 0 0 1em;  /* top - right - bottom - left */
-    border-left: 3px solid #682363;
+    padding-bottom: 2em;
+}
+
+.edu {
+	width: 50%;
+	position: relative;
+	padding-right: 69px;
+	clear: both;  
+}
+
+.edu-info-school {
+    font-weight: bold;
+    font-size: 1em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.edu-info-field {
+    font-size: 0.75em;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.edu-info-years {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.edu-text {
+    color: #BEBEBE;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.8em;
+    margin: 0;
+    margin-top: 1em;
+    text-align: justify;
+
+}
+
+.right { 
+    padding-left: 50px;
+}
+
+.arrow {
+	width: 30px;
+	height: 30px;
+    transform: rotate(45deg);
+    border-radius: 15%;
+    float: right;
+	margin-right: -85px;
+	margin-top: 1em;
+	position: relative;
+}
+
+.edu .arrow.first, .arrow.odd {
+    border-left: 5px solid #682363;
+    border-bottom: 5px solid #682363;
+
+}
+
+.edu .arrow.even, .arrow.last{
+    border-right: 5px solid #682363;
+    border-top: 5px solid #682363;
+}
+
+.right .arrow {
+	float: left;
+	margin-left: -85px;
 }
 
 
@@ -383,11 +463,11 @@ body {
     cursor: pointer;
     padding: 1em;
     margin-top: 2em;
-    width: 80%;
+    width: 90%;
     border: none;
     text-align: left;
     outline: none;
-    font-size: 0.8em;
+    font-size: 1em;
 }
   
 .active, .collapsible:hover {
@@ -407,7 +487,7 @@ body {
 }
 
 .content {
-    width: 80%;
+    width: 90%;
     height: 100%;
     padding-left: 1em;
     font-family: "Raleway", sans-serif;
