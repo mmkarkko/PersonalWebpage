@@ -370,6 +370,12 @@ body {
     margin: 2em 4em 0 0;   /* top - right - bottom - left */
 }
 
+.flex-item:hover {
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+    background-color: #0a0a0a;
+}
+
 .school-header, .years {
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
