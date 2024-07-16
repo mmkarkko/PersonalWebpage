@@ -210,7 +210,7 @@ body {
 }
 
 
-/* Contents text in sections */
+/* Contents in sections */
 .content-about, .content-skills, .content-exp, .content-edu, .some-container {
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
@@ -218,6 +218,7 @@ body {
     font-style: normal;
     font-size: 1.5em;
     margin: 2em 8em 0em 3em;  /* top - right - bottom - left */
+    
 }
 
 
@@ -236,14 +237,12 @@ body {
 /* For centering the animated scroll-icon ----------------------------------------------------  */
 .scroll-icon-container {
     margin: 0;
-    padding: 0;
+    padding: 3em 0 5em 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 2vh;
     background: #000;
-    padding-bottom: 5em;
-    padding-top: 3em;
 }
 
 .scroll-icon {
@@ -251,7 +250,6 @@ body {
     width: 25px;
     height: 25px;
     transform: rotate(45deg);
-
 }
 
 .scroll-icon span {
@@ -311,10 +309,10 @@ body {
 /* Skill bars ------------------------------------------------------------- */
 .skills-container {
     width: 100%;
-    display: flex;
     margin: 0;
-    flex-wrap: wrap;
     gap: 2em;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #skills {
@@ -351,106 +349,47 @@ body {
     transition: width 0.5s;
 }
 
-
+ /* top - right - bottom - left */
 /* CONTENT EDUCATION -------------------------------------------------------- */
-#education {
-    margin-bottom: 1em;
+.flex-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
 }
 
-.content-edu {
-    width: 80%;
+.flex-item {
+    border-left: 5px solid #682363;
+    padding-left: 1em;
+    min-height: 300px;
+    width: 40%;
+    flex: 1 1 40%;  /* grow - shrink - size */
+    margin: 2em 4em 0 0;   /* top - right - bottom - left */
 }
 
-/* Edu-section right and left alternating educations */
-.edu-even-and-odd:before, .edu-even-and-odd:after {
-	content: " ";
-	display: table;
-}
-
-.edu-even-and-odd:after { 
-    clear: both;
-}
-
-.left { 
-    float: left;
-    padding-bottom: 2em;
-}
-
-.right {
-    float: right;
-    padding-bottom: 2em;
-}
-
-.edu {
-	width: 50%;
-	position: relative;
-	padding-right: 69px;
-	clear: both;  
-}
-
-.edu-info-school {
-    font-weight: bold;
-    font-size: 1em;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-.edu-info-field {
-    font-size: 0.75em;
-    margin-top: 0;
-    padding-top: 0;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-.edu-info-years {
-    margin-top: 0;
-    padding-top: 0;
-}
-
-.edu-text {
-    color: #BEBEBE;
+.school-header, .years {
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
     font-size: 0.8em;
-    margin: 0;
-    margin-top: 1em;
+}
+
+.school-header {
+    text-transform: uppercase;
+}
+
+.edu-text {
+    font-family: "Raleway", sans-serif;
+    font-weight: normal;
+    font-size: 0.8em;
+    margin: 1em 0 0 0;
     text-align: justify;
+} 
 
-}
-
-.right { 
-    padding-left: 50px;
-}
-
-.arrow {
-	width: 30px;
-	height: 30px;
-    transform: rotate(45deg);
-    border-radius: 15%;
-    float: right;
-	margin-right: -85px;
-	margin-top: 1em;
-	position: relative;
-}
-
-.edu .arrow.first, .arrow.odd {
-    border-left: 5px solid #682363;
-    border-bottom: 5px solid #682363;
-
-}
-
-.edu .arrow.even, .arrow.last{
-    border-right: 5px solid #682363;
-    border-top: 5px solid #682363;
-}
-
-.right .arrow {
-	float: left;
-	margin-left: -85px;
-}
 
 
 /* CONTENT - EXPERIENCE  -------------------------------------------------------------*/
@@ -463,11 +402,11 @@ body {
     cursor: pointer;
     padding: 1em;
     margin-top: 2em;
-    width: 90%;
+    width: 80%;
     border: none;
     text-align: left;
     outline: none;
-    font-size: 1em;
+    font-size: 0.8em;
 }
   
 .active, .collapsible:hover {
@@ -487,7 +426,7 @@ body {
 }
 
 .content {
-    width: 90%;
+    width: 80%;
     height: 100%;
     padding-left: 1em;
     font-family: "Raleway", sans-serif;
